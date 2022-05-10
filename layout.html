@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        main {
+            width: 75%;
+            margin: auto;
+        }
+
+        header,
+        footer {
+            background-color: crimson;
+            color: #fff;
+            text-align: center;
+            height: 50px;
+        }
+
+        article {
+            height: 75vh;
+            margin: 10px 0px;
+            display: flex;
+            gap: 10px;
+        }
+
+        article aside:first-child,
+        article aside:last-child {
+            background-color: yellow;
+            text-align: center;
+            height: 100%;
+            width: 20%;
+        }
+
+        section {
+            width: 60%;
+            background-color: blueviolet;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="main">
+        <header> Header </header>
+        <article>
+            <aside> Left </aside>
+            <section> Section </section>
+            <aside> Right </aside>
+        </article>
+        <footer> Footer </footer>
+    </main>
+</body>
+
+</html>
