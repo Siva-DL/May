@@ -13,16 +13,16 @@
             box-sizing: border-box;
         }
 
-        main {
-            background: url(/images/pexels-christina-morillo-1181290.jpg) no-repeat center;
-            height: 100vh;
-            background-size: cover;
-        }
+
 
         header {
             background-color: rgba(125, 125, 125, 0.6);
             color: #fff;
             padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
         }
 
         #logo {
@@ -41,6 +41,12 @@
         }
 
         /* combinators */
+        main {
+            background: url(/images/pexels-christina-morillo-1181290.jpg) no-repeat center;
+            height: 100vh;
+            background-size: cover;
+        }
+
         li {
             display: inline-block;
             padding: 10px;
@@ -48,13 +54,15 @@
 
         section {
             width: 70%;
-            margin: 150px auto;
+            padding: 50px;
+            margin: 0px auto;
         }
 
         h1 {
             font-size: 40px;
             margin-bottom: 25px;
             width: 50%;
+            margin-top: 100px;
         }
 
         p {
@@ -76,32 +84,33 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div id="logo">myLOGO</div>
+            <div class="menuContent">
+                <ul class="menu">
+                    <li>
+                        Home
+                    </li>
+                    <li>
+                        Home
+                    </li>
+                    <li>
+                        Home
+                    </li>
+                    <li>
+                        Home
+                    </li>
+                    <li>
+                        Home
+                    </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </nav>
+    </header>
     <main class="mainEle">
-        <header>
-            <nav>
-                <div id="logo">myLOGO</div>
-                <div class="menuContent">
-                    <ul class="menu">
-                        <li>
-                            Home
-                        </li>
-                        <li>
-                            Home
-                        </li>
-                        <li>
-                            Home
-                        </li>
-                        <li>
-                            Home
-                        </li>
-                        <li>
-                            Home
-                        </li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </nav>
-        </header>
+
         <article>
             <section>
                 <h1> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, id!</h1>
@@ -112,6 +121,9 @@
                 <div class="btn"> More Items</div>
             </section>
         </article>
+        <p style="height: 100vh"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, aperiam ab?
+            Dolore laborum unde laudantium aut inventore similique. Sunt hic, voluptas veritatis aperiam architecto
+            voluptates officia dolorem impedit illum quis.</p>
     </main>
 </body>
 

@@ -8,17 +8,27 @@
     <title>Document</title>
     <style>
         table {
-            width: 350px;
+            width: 50%;
             margin: auto;
             text-align: center;
+        }
+
+        th {
+            background-color: cadetblue;
+            color: #fff;
         }
 
         table,
         th,
         td {
-            border: 2px solid;
+            /* border: 2px solid; */
             border-collapse: collapse;
             padding: 10px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #ccc;
         }
     </style>
 </head>

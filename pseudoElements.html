@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width: 500px;
+            border: 1px solid;
+            padding: 10px;
+            text-indent: 50px;
+        }
+
+        p::first-letter {
+            font-size: 42px;
+            color: red;
+            font-style: italic;
+        }
+
+        p::first-line {
+            text-decoration: underline;
+        }
+
+        p::selection {
+            background-color: brown;
+            color: #fff;
+        }
+
+        h3 {
+            text-align: center;
+            width: 300px;
+            padding: 10px;
+            /* border-bottom: 2px solid; */
+            /* text-decoration: underline; */
+            position: relative;
+        }
+
+        h3::before {
+            content: "";
+            position: absolute;
+            left: 125px;
+            top: 40px;
+            width: 70px;
+            height: 2px;
+            background-color: red;
+        }
+
+        h3::after {
+            /* content: "---------"; */
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit earum rem illo temporibus ratione sint
+        consequuntur vitae itaque ducimus, reprehenderit numquam maiores architecto repellat odit alias ut libero.
+        Molestias, impedit!
+    </p>
+
+    <h3> Our Services</h3>
+</body>
+
+</html>
