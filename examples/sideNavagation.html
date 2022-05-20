@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        main {
+            display: flex;
+            height: 100vh;
+        }
+
+        header {
+            width: 15%;
+            height: 100vh;
+            background-color: aquamarine;
+        }
+
+        article {
+            width: 85%;
+            height: 100vh;
+            overflow: auto;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            height: 100vh;
+            background-color: crimson;
+            color: #fff;
+        }
+
+        section:nth-child(even) {
+            height: 100vh;
+            background-color: rgb(23, 84, 175);
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>mainHeader</h1>
+            <ul>
+                <li>
+                    <a href="#home"> Home</a>
+                </li>
+                <li>
+                    <a href="#about"> About</a>
+                </li>
+                <li>
+                    <a href="#gallery"> Gallery</a>
+                </li>
+                <li>
+                    <a href="#contact"> Contact</a>
+                </li>
+            </ul>
+        </header>
+        <article>
+            <section id="home">
+                <h1>Home </h1>
+            </section>
+            <section id="about">
+                <h1>About </h1>
+            </section>
+            <section id="gallery">
+                <h1>Gallery </h1>
+            </section>
+            <section id="contact">
+                <h1>Contact </h1>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

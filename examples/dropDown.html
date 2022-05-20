@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .drop {
+            width: 120px;
+            /* padding: 10px; */
+            margin: auto;
+            /* border: 1px solid red; */
+            position: relative;
+            /* z-index: 99; */
+        }
+
+        #btn {
+            width: 100px;
+            padding: 10px;
+            text-align: center;
+            border: #ccc;
+            background-color: rgb(71, 71, 71);
+            color: #fff;
+            margin: auto;
+            box-shadow: 1px 1px 2px 2px rgb(233, 126, 126);
+            cursor: pointer;
+            letter-spacing: 5px;
+            /* word-spacing: 10px; */
+        }
+
+        .menuItems {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            background-color: #ccc;
+            display: none;
+            position: absolute;
+            width: 100%;
+            top: 40px;
+
+        }
+
+        .menuItems li {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #fff;
+        }
+
+        .drop:hover .menuItems {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="drop">
+        <div id="btn"> Hover</div>
+        <ul class="menuItems">
+            <li> Dropmenu 1</li>
+            <li> Dropmenu 2</li>
+            <li> Dropmenu 3</li>
+        </ul>
+    </div>
+</body>
+
+</html>
