@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;600;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/39442b0661.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        main {
+            width: 50%;
+            margin: auto;
+        }
+
+        .input_wrap {
+            width: 50%;
+            display: flex;
+            border: 1px solid;
+            margin-top: 10px;
+        }
+
+        .input_wrap input {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            color: red;
+            border-radius: 10px;
+            border: none;
+
+        }
+
+        .input_wrap input:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1> FORM elements</h1>
+        <form autocomplete="off" action="/">
+            <div class="input_wrap">
+                <label for="user"><i class="fa-solid fa-user"
+                        style="font-size: 30px; color:red; padding: 10px;"></i></label>
+                <input type="text" name="user" id="user" placeholder="userName" required maxlength="10">
+                *
+            </div>
+
+            <div class="input_wrap">
+                <label for="password">password</label>
+                <input type="password" name="password" id="password" placeholder="password" disabled>
+            </div>
+
+
+            <label for="Email">Email</label>
+            <input type="email" name="Email" id="Email" placeholder="Email" autocomplete="off" required>
+
+
+            <label for="Email">Search</label>
+            <input type="search" name="Email" id="Email" placeholder="Email" autocomplete="off" readonly>
+
+
+            <label for="Email">Number</label>
+            <input type="number" name="Email" id="Email" placeholder="Email" autocomplete="off" maxlength="10">
+
+
+
+            <label for="Email">Color</label>
+            <input type="color" name="Email" id="Email">
+
+
+            <label for="Email">Range</label>
+            <input type="range" name="Email" id="Email">
+
+
+            <label for="Email">please choose</label>
+            <input type="file" name="Email" id="Email">
+
+
+            <label for="Email">Date</label>
+            <input type="date" name="Email" id="Email">
+
+
+
+
+            <label for="Male">Male</label>
+            <input type="radio" name="gender" id="Male" value="male">
+
+            <label for="FeMale">FeMale</label>
+            <input type="radio" name="gender" id="FeMale" value="female">
+
+
+            <label for="hyd">HYD</label>
+            <input type="checkbox" name="hyd" id="hyd">
+
+            <label for="hyd">HYD</label>
+            <input type="checkbox" name="hyd" id="hyd">
+
+            <label for="hyd">HYD</label>
+            <input type="checkbox" name="hyd" id="hyd" disabled>
+
+
+
+            <select name="city" id="city">
+                <option value="none">-- Please Choose --</option>
+                <option value="Hyd">HYD</option>
+                <option value="BANGLORE">BANGLORE</option>
+                <option value="GOA">GOA</option>
+            </select>
+
+
+            <textarea name="" id="" cols="30" rows="10">
+
+            </textarea>
+
+
+            <button type="submit" disabled> Sign Up</button>
+            <!-- <input type="submit" value="Sign In"> -->
+            <input type="button" value="Sign In">
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+</body>
+
+</html>
