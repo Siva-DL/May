@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            height: 50px;
+            background-color: #ccc;
+            position: relative;
+        }
+
+        /* 
+        #demo ul {
+            display: none;
+        } */
+
+        #demo ul li {
+            display: inline-block;
+        }
+
+        button {
+            display: none;
+        }
+
+
+        /* Common Classes */
+        .p-10 {
+            padding: 10px;
+        }
+
+
+        /* Media Queries */
+
+
+        /* Mobile First */
+        /* >= 768px */
+
+
+
+        @media screen and (max-width:1024px) {
+            body {
+                background-color: greenyellow;
+            }
+
+            button {
+                display: none;
+            }
+
+            #demo ul {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            body {
+                background-color: red;
+            }
+
+            button {
+                display: inline;
+            }
+
+            #demo {
+                position: absolute;
+                width: 100%;
+                top: 50px;
+                background-color: #ccc;
+                display: none;
+            }
+
+            #demo ul {
+                display: block;
+            }
+
+            #demo ul li {
+                display: block;
+                text-align: center;
+                margin-top: 5px;
+                border-bottom: 1px solid;
+            }
+
+            button:hover+#demo {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="logo p-10"> LOGO </div>
+        <button type="button"> Menu </button>
+        <nav id="demo">
+            <ul class="p-10">
+                <li>Home </li>
+                <li>Home 1</li>
+                <li>Home 2</li>
+                <li>Home 3</li>
+            </ul>
+        </nav>
+    </main>
+</body>
+
+</html>
