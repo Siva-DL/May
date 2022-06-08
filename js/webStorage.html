@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                </div>
+                <div id="btnWrap">
+                    <button type="button" class="btn btn-primary w-100"> getEmail </button>
+                </div>
+            </div>
+        </div>
+        <script>
+            const btnGet = document.querySelector('button');
+            btnGet.addEventListener('click', function () {
+
+                if (document.querySelector('#exampleFormControlInput1').value === "") {
+                    alert('Please enter a valid Email...')
+                    return false;
+                }
+
+                let arr;
+                if (localStorage.getItem('Emails')) {
+                    console.log(localStorage.getItem("Emails"));
+                    arr = JSON.parse(localStorage.getItem('Emails'));
+                } else {
+                    arr = [];
+                }
+
+
+
+                arr.push({ email: document.querySelector('#exampleFormControlInput1').value });
+
+                localStorage.setItem('Emails', JSON.stringify(arr));
+
+                document.querySelector('#exampleFormControlInput1').value = "";
+                console.log(arr);
+
+            }, true);
+
+
+            console.log(JSON.parse(localStorage.getItem('Emails')));
+
+
+        </script>
+</body>
+
+</html>

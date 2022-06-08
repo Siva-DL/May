@@ -503,13 +503,9 @@ let Products = [
 const mainContent = document.querySelector("#mainContent");
 
 let bindData = "";
-for (let i in Users) {
-  console.log(Users[i].name);
+for (let i in JSON.parse(localStorage.getItem("Emails"))) {
   bindData += `<tr>
-  <th scope="row">${Users[i].id}</th>
-  <td>${Users[i].name}</td>
-  <td>${Users[i].username}</td>
-  <td>${Users[i].email}</td>
+  <td>${JSON.parse(localStorage.getItem("Emails"))[i].email}</td>
 </tr>`;
 }
 
