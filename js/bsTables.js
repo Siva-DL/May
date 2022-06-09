@@ -505,7 +505,7 @@ const mainContent = document.querySelector("#mainContent");
 let bindData = "";
 for (let i in JSON.parse(localStorage.getItem("Emails"))) {
   bindData += `<tr>
-  <td>${JSON.parse(localStorage.getItem("Emails"))[i].email}</td>
+  <td>${Users[i].email}</td>
 </tr>`;
 }
 
