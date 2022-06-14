@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const user = {
+            _name: 'x',
+            contact: 123,
+            fullDetails(age, salary) {
+                return this._name + "--" + this.contact + "--" + age + "--" + salary
+            }
+        }
+
+        const employee = {
+            _name: 'emp1',
+            contact: 999,
+            age: 30
+        }
+
+        // call, apply and Bind;
+
+
+        const emp1 = user.fullDetails.call(employee, 30, 100);
+        const emp2 = user.fullDetails.apply(employee, [30, 100]);
+        console.log(emp2);
+
+        const emp3 = user.fullDetails.bind(employee, 30, 100);
+        console.log(emp3())
+
+
+        // console.log(this);
+
+
+
+
+    </script>
+</body>
+
+</html>
