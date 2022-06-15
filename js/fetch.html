@@ -20,7 +20,7 @@
     </ul>
     <div id="main" class="bg-dark text-white"></div>
     <script>
-        // getSingleRecord();
+        getSingleRecord();
         function getSingleRecord() {
 
             for (var i = 0; i < document.getElementsByClassName('list-group-item').length; i++) {
@@ -42,14 +42,14 @@
 
         }
 
-        fetch('./bsTable.html')
-            .then((res) => {
-                return res.text();
-            })
-            .then((result) => {
-                console.log(result);
-                document.querySelector('#main').innerHTML = result;
-            })
+        // fetch('./bsTable.html')
+        //     .then((res) => {
+        //         return res.text();
+        //     })
+        //     .then((result) => {
+        //         console.log(result);
+        //         document.querySelector('#main').innerHTML = result;
+        //     })
 
     </script>
 </body>

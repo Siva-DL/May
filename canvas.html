@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="can" width="500" height="500" style="border: 1px solid;"></canvas>
+    <script>
+        let myCanvas = document.querySelector('#can');
+        // console.log(myCanvas);
+        let context = myCanvas.getContext('2d');
+        console.log(context);
+        context.fillStyle = "red";
+        context.fillRect(0, 0, 500, 50);
+
+
+
+        context.beginPath();
+        context.fill();
+        context.moveTo(0, 50);
+        context.lineTo(500, 250);
+        context.moveTo(500, 250);
+        context.lineTo(0, 350);
+        context.moveTo(0, 350);
+        context.lineTo(0, 50);
+        context.closePath();
+        context.strokeStyle = "red"
+        context.stroke();
+
+        context.font = "50px sans-serif";
+        context.fillText("My Canvas", 150, 250);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li> Home </li>
+        <li> About </li>
+        <li> Contact </li>
+    </ul>
+    <div id="bindData"></div>
+    <script>
+
+
+        const Ul = document.querySelector('ul');
+
+        console.log(Ul.children);
+
+        for (var i = 0; i < Ul.children.length; i++) {
+            Ul.children[i].onclick = function () {
+                console.log(this.innerText.toLowerCase())
+                fetchPages(`${this.innerText.toLowerCase()}.html`)
+            }
+        }
+
+
+        fetchPages('home.html');
+        function fetchPages(url) {
+            fetch(url)
+                .then((res) => {
+                    return res.text()
+                })
+                .then((data) => {
+                    console.log(data);
+                    document.querySelector('#bindData').innerHTML = data;
+                })
+        }
+    </script>
+</body>
+
+</html>
