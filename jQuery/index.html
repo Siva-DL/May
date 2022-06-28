@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #animateElement {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: auto;
+            /* display: none; */
+        }
+    </style>
+</head>
+
+<body>
+    <div> Hello </div>
+    <div id="demo"> Test </div>
+    <div class="demo"> Test </div>
+
+    <article id="animateElement">
+        Demo
+    </article>
+    <button type="button"> CLICK </button>
+
+    <script>
+        // .html(), .text(), .css(), attr(),
+        // $('#demo').html('<h1>Hello World! with ID </h1>');
+        // $('.demo').attr("id", 'NewId').html('<h1>Hello World! width Class</h1>').css({ color: 'red' })
+
+
+        // ele.eventName(cb);
+
+
+        $('div:first-child').on('click', function () {
+            $('#demo').html('<h1>Hello World! with ID </h1>');
+            $('.demo').attr("id", 'NewId').html('<h1>Hello World! width Class</h1>').css({ color: 'red' })
+        });
+
+
+        $('button').click(() => {
+            // $('#animateElement').fadeOut('1000');
+            // $('#animateElement').fadeIn('1000');
+            // $('#animateElement').fadeToggle('1000');
+
+
+            // $('#animateElement').slideUp('1000');
+            // $('#animateElement').slideDown('1000');
+            // $('#animateElement').slideToggle('1000');
+
+            // $('#animateElement').hide();
+            // $('#animateElement').show();
+            $('#animateElement').css({ display: "none" });
+        });
+
+
+
+    </script>
+</body>
+
+</html>
