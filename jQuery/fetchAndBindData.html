@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        #countries {
+            width: 300px;
+            display: block;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .dindData {
+            width: 400px;
+            margin: 100px auto;
+            border: 1px solid;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <select name="countries" id="countries">
+        <option value="none">--- Please Choose ---</option>
+    </select>
+
+    <div class="dindData">
+        India
+    </div>
+    <div id="loadHtml"></div>
+
+    <script>
+        $.get("https://countriesnow.space/api/v0.1/countries/capital", function (data) {
+            console.log(data);
+
+            for (let country of data.data) {
+                $('#countries').append(`<option value="${country.name}">${country.name}</option>`)
+            }
+            $('#countries').change(function () {
+                console.log(this.value);
+                let o;
+                for (let filterVal of data.data) {
+                    if (this.value === filterVal.name) {
+                        o = filterVal
+                    }
+                }
+                console.log(o.capital);
+                $(".dindData").html('<p> CAPITAL Of <br/>' + o.name + ' is ' + o.capital + '</p>')
+            });
+        });
+
+
+
+        $('#loadHtml').load('../fetchPages/contact.html')
+
+        // $.post("https://countriesnow.space/api/v0.1/countries/capital",)
+
+        $.ajax({
+            url: 'https://countriesnow.space/api/v0.1/countries/capital',
+            data: {
+                "country": "nigeria"
+            },
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>
